@@ -1,0 +1,741 @@
+        /* General Body Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f0f0f5;
+            /* Light grey-purple background */
+            color: #333;
+            overflow-x: hidden;
+            /* Prevent horizontal scrollbar */
+            cursor: pointer;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Main Container */
+        .main {
+            /*background: linear-gradient(135deg, #8a2be2, #a252e8);*/
+            /* Purple gradient */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 1;
+            background-image: url("https://static.vecteezy.com/system/resources/previews/026/842/893/non_2x/ice-cream-abstract-background-with-empty-space-for-text-ai-generative-free-photo.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            backface-visibility: visible;
+        }
+
+        /* Navigation Containers */
+        .header-nav {
+            display: flex;
+            justify-content: space-between;
+            /* Space between toggle and nav-links on desktop */
+            align-items: center;
+            /* Align items vertically in the center */
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            padding: 0 10px;
+            /* Add some horizontal padding */
+        }
+
+        .nav-links {
+            display: flex;
+            /* Make nav-links a flex container for nav-groups */
+            flex-direction: row;
+            /* Default to row for desktop */
+            flex-wrap: wrap;
+            justify-content: space-between;
+            /* Push nav1 left, nav2 right on desktop */
+            flex-grow: 1;
+            /* Allow nav-links to take available space */
+            gap: 20px;
+            /* Gap between nav groups if they wrap */
+        }
+
+        .nav-group {
+            display: flex;
+            /* Make each nav-group a flex container for its items */
+            flex-wrap: wrap;
+            gap: 15px;
+            /* Space between individual nav items */
+        }
+
+        .nav-group div {
+            padding: 5px 10px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            color: black;
+        }
+
+        .nav-group div a {
+            font-weight: 600;
+            color: #551033;
+            transition: color 0.3s ease;
+        }
+
+        .active{
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .nav-group div:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .nav-group div a:hover {
+            color: #551033;
+            /* Lighter purple on hover */
+        }
+
+        
+
+        /* Hamburger Menu Icon */
+        .menu-toggle {
+            display: none;
+            /* Hidden by default on desktop */
+            font-size: 1.8em;
+            color: white;
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu-toggle:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Logo/Title */
+        .container2 h1 {
+            font-family: 'Righteous', cursive;
+            font-size: 5em;
+            margin: 20px 0 10px;
+            letter-spacing: 5px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            color: black;
+            background-color: white;
+            border-radius: 50px;
+        }
+
+        .container2 h1 span {
+            color: #DAB5DA;
+            /* Lighter purple for 'i' */
+        }
+
+        .container3 {
+            font-family: Acme;
+            margin-bottom: 15px;
+            font-weight: normal;
+            color: black;
+            letter-spacing: 2.6px;
+            font-size: 1vh;
+        }
+
+        .container4,
+        .container5 {
+            font-family: Croissant One;
+            font-size: 2.5em;
+            font-weight: 700;
+            margin: 5px 0;
+            color: black;
+        }
+
+        /* Explore Button */
+        .button {
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .button button {
+            background-color: white;
+            color: #551033;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 1.2em;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .button button:hover {
+            background-color: white;
+            color: #DAB5DA;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .button button a {
+            color: inherit;
+        }
+
+        /* Footer Section (container6) */
+        .container6 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            /* Distributes items evenly */
+            align-items: flex-start;
+            /* Aligns items to the top */
+            padding: 40px 20px;
+            background-color: #f8f8ff;
+            /* Ghost white */
+            color: #333;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            margin-top: -30px;
+            /* Overlap with main container */
+            position: relative;
+            z-index: 0;
+            box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .m1,
+        .m2,
+        .m3 {
+            flex: 1;
+            /* Allows items to grow and shrink */
+            min-width: 280px;
+            /* Minimum width before wrapping on larger screens */
+            margin: 20px;
+            /* Adjust margin for spacing */
+            padding: 25px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .m1:hover,
+        .m2:hover,
+        .m3:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+        }
+
+        .m1 #h2 {
+            font-family: 'Righteous';
+            font-size: 2.5em;
+            color: black;
+            /* Dark purple */
+            margin-bottom: 10px;
+        }
+
+        .m1 #p1 {
+            font-family: 'Acme';
+            font-size: 0.7em;
+            color: #551033;
+            /* Medium purple */
+            margin-bottom: 20px;
+            word-spacing: 2px;
+            letter-spacing: 1.3px;
+        }
+
+        .m1 #pp1 {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* Styling for m2 (containing n1 and n2) */
+        .m2 {
+            display: flex;
+            /* Make m2 a flex container */
+            flex-wrap: wrap;
+            /* Allow n1 and n2 to wrap */
+            justify-content: space-around;
+            /* Distribute space between n1 and n2 */
+            align-items: flex-start;
+            /* Align items to the top */
+        }
+
+        .m2 .n1,
+        .m2 .n2 {
+            margin-bottom: 0;
+            /* Remove previous margin-bottom */
+            flex-basis: 48%;
+            /* Give them almost half width each */
+            min-width: 200px;
+            /* Ensure they don't get too small */
+            padding: 0;
+            /* Remove padding from n1/n2 if it's redundant with m2 padding */
+            word-wrap: break-word;
+            /* Ensure text wraps within the div */
+            overflow-wrap: break-word;
+            /* Standard property for text wrapping */
+        }
+
+
+        .m3 #p3 {
+            font-family: 'Kanit', sans-serif;
+            font-size: 1.5em;
+            color: #551033;
+            /* Dark purple */
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            display: inline-block;
+            font-weight: bold;
+            letter-spacing: 1.4px;
+        }
+
+        .m2 ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 0;
+            /* Remove default ul margin */
+        }
+
+        .m2 ul li {
+            margin-bottom: 10px;
+        }
+
+        .m2 ul li a {
+            font-family: 'Jost', sans-serif;
+            color: #555;
+            transition: color 0.3s ease;
+        }
+
+        .m2 ul li a:hover {
+            color: #551033;
+            /* Dark purple on hover */
+        }
+
+
+        /* Newsletter Signup */
+        .m3 form.ex {
+            display: flex;
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .m3 form.ex input[type="email"] {
+            flex-grow: 1;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1em;
+            outline: none;
+            border-top-left-radius: 25px;
+            border-bottom-left-radius: 25px;
+            font-family: Righteous;
+        }
+
+        .m3 form.ex input[type="submit"] {
+            background-color: #DAB5DA;
+            /* Dark purple */
+            color: #551033;
+            border: none;
+            padding: 12px 25px;
+            border-top-right-radius: 25px;
+            border-bottom-right-radius: 25px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .m3 form.ex input[type="submit"]:hover {
+            background-color: #551033;
+            color: #DAB5DA;
+            /* Medium purple on hover */
+        }
+
+        .m3 #pp3 {
+            font-family: 'Open Sans', sans-serif;
+            margin-top: 20px;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        .m3 #pp3 #span a {
+            color: #551033;
+            /* Dark purple for email links */
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .m3 #pp3 #span a:hover {
+            color: #551033;
+            /* Medium purple on hover */
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+
+        /* Mobile devices (portrait and landscape) */
+        @media (max-width: 767px) {
+            .main {
+                padding: 15px;
+                border-bottom-left-radius: 30px;
+                border-bottom-right-radius: 30px;
+            }
+
+            .header-nav {
+                flex-direction: column;
+                align-items: flex-start;
+                /* Align items to the start when stacked */
+            }
+
+            .menu-toggle {
+                display: block;
+                /* Show hamburger on mobile */
+                align-self: flex-end;
+                /* Align toggle to the right */
+                order: -1;
+                /* Place it before other items in flex order */
+                margin-bottom: 10px;
+                /* Space below toggle */
+            }
+
+            .nav-links {
+                flex-direction: column;
+                /* Stack nav groups vertically */
+                width: 100%;
+                /* Take full width */
+                display: none;
+                /* Hidden by default */
+                transition: all 0.3s ease-in-out;
+                gap: 10px;
+                /* Space between nav groups */
+            }
+
+            .nav-links.active {
+                display: flex;
+                /* Show when active */
+            }
+
+            .nav-group {
+                flex-direction: column;
+                /* Stack individual nav items vertically */
+                width: 100%;
+                /* Take full width */
+                text-align: center;
+                /* Center text in stacked items */
+                gap: 5px;
+                /* Smaller gap for individual items */
+            }
+
+            .nav-group div {
+                width: 100%;
+                /* Full width for each nav item */
+                padding: 10px 0;
+                /* More vertical padding for clickable area */
+            }
+
+
+            .container2 h1 {
+                font-size: 3.5em;
+            }
+
+            .container3 {
+                font-size: 1.2em;
+            }
+
+            .container4,
+            .container5 {
+                font-size: 1.8em;
+            }
+
+            .button button {
+                padding: 12px 25px;
+                font-size: 1em;
+            }
+
+            .container6 {
+                flex-direction: column;
+                /* Stack m1, m2, m3 vertically */
+                align-items: center;
+                /* Center items when stacked */
+                padding: 20px 10px;
+                border-top-left-radius: 30px;
+                border-top-right-radius: 30px;
+                margin-top: -20px;
+            }
+
+            .m1,
+            .m2,
+            .m3 {
+                margin: 15px 0;
+                /* Vertical margin for stacked items */
+                padding: 20px;
+                width: 90%;
+                /* Take most of the width, allow some padding */
+                min-width: unset;
+                /* Allow to shrink */
+                max-width: 400px;
+                /* Prevent them from becoming too wide on very small screens */
+            }
+
+            .m1 #h2 {
+                font-size: 2em;
+            }
+
+            .m1 #p1 {
+                font-size: 1em;
+            }
+
+            .m2 {
+                flex-direction: column;
+                /* Stack n1 and n2 vertically on mobile */
+            }
+
+            .m2 .n1,
+            .m2 .n2 {
+                flex-basis: 100%;
+                /* Full width for n1 and n2 on mobile */
+                margin-bottom: 20px;
+                /* Add some space between n1 and n2 */
+                min-width: unset;
+                /* Allow to shrink below 200px */
+            }
+
+            .m2 #p2,
+            .m3 #p3 {
+                font-size: 1.4em;
+            }
+
+            .m3 form.ex {
+                flex-direction: column;
+                border-radius: 10px;
+            }
+
+            .m3 form.ex input[type="email"] {
+                border-radius: 10px;
+                margin-bottom: 10px;
+            }
+
+            .m3 form.ex input[type="submit"] {
+                border-radius: 10px;
+                width: 100%;
+            }
+        }
+
+        /* Tablet devices (portrait and landscape) */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .main {
+                padding: 25px;
+                border-bottom-left-radius: 40px;
+                border-bottom-right-radius: 40px;
+            }
+
+            .header-nav {
+                flex-direction: column;
+                /* Stack header items vertically */
+                align-items: flex-start;
+            }
+
+            .menu-toggle {
+                display: block;
+                /* Show hamburger on tablet */
+                align-self: flex-end;
+                /* Align toggle to the right */
+                order: -1;
+                /* Place it before other items in flex order */
+                margin-bottom: 10px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                /* Stack nav groups vertically */
+                width: 100%;
+                display: none;
+                /* Hidden by default */
+                transition: all 0.3s ease-in-out;
+                gap: 15px;
+                /* Space between nav groups */
+            }
+
+            .nav-links.active {
+                display: flex;
+                /* Show when active */
+            }
+
+            .nav-group {
+                flex-direction: column;
+                /* Stack individual nav items vertically */
+                width: 100%;
+                text-align: center;
+                gap: 10px;
+                /* Smaller gap for individual items */
+            }
+
+            .nav-group div {
+                width: 100%;
+                /* Full width for each nav item */
+                padding: 10px 0;
+            }
+
+            .container2 h1 {
+                font-size: 4.5em;
+            }
+
+            .container3 {
+                font-size: 1.4em;
+            }
+
+            .container4,
+            .container5 {
+                font-size: 2.2em;
+            }
+
+            .button button {
+                padding: 14px 28px;
+                font-size: 1.1em;
+            }
+
+            .container6 {
+                padding: 30px 15px;
+                margin-top: -25px;
+                flex-direction: row;
+                /* Ensure m1, m2, m3 are in a row */
+                justify-content: space-around;
+                /* Distribute space */
+                align-items: flex-start;
+                /* Align to top */
+            }
+
+            .m1,
+            .m2,
+            .m3 {
+                margin: 15px;
+                padding: 25px;
+                flex: 1 1 auto;
+                /* Allow to grow and shrink, but prefer natural size */
+                min-width: 280px;
+                /* Ensure they don't get too small */
+                max-width: 30%;
+                /* Roughly one-third, allowing for margins */
+            }
+
+            .m2 {
+                flex-direction: row;
+                /* Align n1 and n2 horizontally on tablet */
+                justify-content: space-between;
+                /* Space them out */
+                gap: 20px;
+                /* Add gap between n1 and n2 */
+            }
+
+            .m2 .n1,
+            .m2 .n2 {
+                flex-basis: calc(50% - 10px);
+                /* Adjust width to account for gap */
+                min-width: unset;
+                /* Remove min-width for better tablet flex */
+            }
+        }
+
+        /* Laptop/Desktop devices */
+        @media (min-width: 1025px) {
+            .main {
+                padding: 30px 50px;
+            }
+
+            .header-nav {
+                flex-direction: row;
+                /* Horizontal layout on desktop */
+                justify-content: space-between;
+                /* Space between toggle and nav-links */
+                align-items: center;
+            }
+
+            .menu-toggle {
+                display: none;
+                /* Hide hamburger on desktop */
+            }
+
+            .nav-links {
+                display: flex;
+                /* Always visible on desktop */
+                flex-direction: row;
+                /* Nav groups horizontal */
+                width: auto;
+                /* Auto width */
+                justify-content: space-between;
+                /* Push nav1 left, nav2 right within nav-links */
+                flex-grow: 1;
+                /* Allow nav-links to take available space */
+            }
+
+            .nav-group {
+                display: flex;
+                /* Individual nav items horizontal */
+                flex-direction: row;
+                width: auto;
+                text-align: left;
+                gap: 15px;
+                /* Space between individual items */
+            }
+
+            .nav-group div {
+                width: auto;
+                /* Auto width for each nav item */
+                padding: 5px 10px;
+            }
+
+            .container2 h1 {
+                font-size: 5.5em;
+            }
+
+            .container3 {
+                font-size: 1.5em;
+            }
+
+            .container4,
+            .container5 {
+                font-size: 3em;
+            }
+
+            .container6 {
+                max-width: 100%;
+                margin: -30px auto 0;
+                padding: 50px 30px;
+                flex-direction: row;
+                /* Ensure m1, m2, m3 are in a row */
+                justify-content: space-around;
+                /* Distribute space */
+                align-items: flex-start;
+                /* Align to top */
+            }
+
+            .m1,
+            .m2,
+            .m3 {
+                flex: 1 1 auto;
+                /* Allow to grow and shrink, but prefer natural size */
+                margin: 20px;
+                /* Margin for spacing between items */
+                max-width: 30%;
+                /* Roughly one-third, allowing for margins */
+            }
+
+            .m2 {
+                flex-direction: row;
+                /* Align n1 and n2 horizontally on desktop */
+                justify-content: space-between;
+                /* Space them out */
+                gap: 20px;
+                /* Add gap between n1 and n2 */
+            }
+
+            .m2 .n1,
+            .m2 .n2 {
+                flex-basis: calc(50% - 10px);
+                /* Adjust width to account for gap */
+                min-width: unset;
+            }
+        }

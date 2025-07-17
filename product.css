@@ -1,0 +1,944 @@
+/* General Body Styles */
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif; /* Default font for general text */
+    background-color: #f8f8f8; /* Light background for the whole page */
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+    color: #333;
+    line-height: 1.6;
+    cursor: pointer;
+}
+
+/* Back to Home Button */
+#back-to-home-button {
+    position: fixed;
+    top: 20px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+#back-to-home-button a {
+    display: flex;
+    align-items: center;
+    background-color: #DAB5DA; /* Hot pink */
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 25px;
+    font-family: 'Jost', sans-serif;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
+
+#back-to-home-button a:hover {
+    background-color: #551033;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#back-to-home-button a i {
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+
+
+/* Header Section (cont2) */
+.cont2 {
+    text-align: center;
+    justify-content: center;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    word-break: break-all;
+    padding: 0px;
+}
+#icream {
+    font-size: 4vh;
+    font-family: Righteous;
+}
+
+#span1 {
+    color: #DAB5DA;
+    font-family: Righteous;
+}
+
+#span2 {
+    font-size: 2vh;
+    font-family: Righteous;
+    font-weight: bold;
+    word-spacing: 5px;
+}
+
+#hr1{
+    width: auto;
+    color: black;
+}
+
+#fp {
+    text-align: left;
+    padding-left: 60px;
+}
+
+/* Our Flavours Section */
+.ourflavours {
+    text-align: center;
+    padding: 40px 20px 20px;
+    font-family: 'Playwrite NG Modern', cursive; /* Cursive font */
+    font-size: 3em;
+    color: #4a004a; /* Dark purple */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ourflavours #our {
+    color: #DAB5DA; /* Hot pink for emphasis */
+}
+
+/* Flavours Navigation Bar */
+.flavours {
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    padding: 0 10px;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Space between nav items */
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #551033; /* Blue link color */
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.1em;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap; /* Prevent text from wrapping within a nav item */
+}
+
+.nav-item a:hover {
+    background-color: #551033;
+    color: white;
+}
+
+
+/* New Treat in Town Banner */
+.cont1 {
+    background-color: #ffe0b2; /* Light orange background */
+    padding: 15px 20px;
+    text-align: center;
+    font-family: 'Acme', sans-serif; /* Cursive-like font */
+    font-size: 1.2em;
+    color: #5a2b00; /* Dark brown text */
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 90%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cont1 a {
+    color: #e65100; /* Darker orange link */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.cont1 a:hover {
+    color: #ff8c00;
+}
+
+/* Gelato Section */
+#gelato {
+    text-align: center;
+    font-family: 'Yeseva One', cursive; /* Cursive font */
+    font-size: 2.5em;
+    color: #d32f2f; /* Reddish color */
+    margin: 40px 0 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Cone Section (Most Popular) */
+#cone {
+    display: flex;
+    flex-direction: row; /* Stack on small screens, row on larger */
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 900px;
+    gap: 30px;
+}
+
+#cone-img img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+#cone-details {
+    text-align: center;
+}
+
+#cone-details h3 {
+    font-family: 'Croissant One', cursive; /* Cursive font */
+    font-size: 1.5em;
+    color: #8a2be2;
+    margin-bottom: 10px;
+}
+
+#cone-details h2 {
+    font-family: 'Patrick Hand', cursive; /* Cursive font */
+    font-size: 3em;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.1;
+}
+
+#vanilla-details {
+    font-family: 'Overpass', sans-serif;
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+#cone-price {
+    font-family: 'Teko', sans-serif; /* Modern, bold font for price */
+    font-size: 2.5em;
+    color: #d32f2f;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* New: Button Group for horizontal alignment */
+.button-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Space between buttons */
+    margin-top: 15px;
+}
+
+/* Shop Now & Add Buttons (General Styling) */
+.b1,
+.b2,
+.bb1,
+.bb2 {
+    width: auto; /* Changed from 70% to auto */
+    border: none;
+    border-radius: 25px;
+    padding: 10px 25px;
+    font-family: 'Jost', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    /* margin: 5px; Removed margin to let gap handle spacing */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
+
+.b1, .bb1 {
+    background-color: #DAB5DA; /* Hot pink */
+    color: #fff;
+
+}
+
+.b1:hover, .bb1:hover {
+    background-color: #551033;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.b2, .bb2 {
+    background-color: #DAB5DA; /* Blue violet */
+    color: #fff;
+    width: 40px; /* Smaller for '+' button */
+    height: 40px;
+    border-radius: 50%; /* Circular */
+    font-size: 1.5em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.b2:hover, .bb2:hover {
+    background-color: #551033;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Indulge Soft Serve Text */
+#indulge {
+    text-align: center;
+    font-family: 'Sevillana', cursive; /* Cursive font */
+    font-size: 2.2em;
+    color: #4a004a;
+    margin: 40px 20px 20px;
+    line-height: 1.4;
+}
+
+/* Soft Serve Section */
+.softy-container,
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 30px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.softy-card,
+.product-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute content vertically */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.softy-card:hover,
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.softy-card img,
+.product-card img {
+    max-width: 100%;
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Cover the area, cropping if necessary */
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.softy-card h3,
+.product-card h3 {
+    font-family: 'Kanit', sans-serif; /* Modern font */
+    font-size: 1.5em;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.softy-card p,
+.product-card p {
+    font-family: 'Sarabun', sans-serif;
+    font-size: 0.95em;
+    color: #666;
+    margin-bottom: 15px;
+    flex-grow: 1; /* Allow description to take up space */
+}
+
+.softy-card .price,
+.product-card .price {
+    font-family: 'Teko', sans-serif; /* Modern, bold font for price */
+    font-size: 1.8em;
+    color: #d32f2f;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.softy-card .price small,
+.product-card .price small {
+    color: #999;
+    text-decoration: line-through;
+    font-size: 0.7em;
+    margin-right: 5px;
+}
+
+/* Category Headers (cla, cla1, etc.) */
+#cla, #cla1, #cla2, #cla3, #cla4, #cla5, #cla6 {
+    text-align: center;
+    font-family: 'Macondo', cursive; /* Cursive font */
+    font-size: 2.2em;
+    color: #551033;
+    margin: 40px 20px 20px;
+    line-height: 1.4;
+}
+
+/* Choco Tacos Offer Section */
+#offer {
+    display: flex;
+    flex-direction: row; /* Stack on small screens */
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    max-width: 90%;
+    padding: 30px;
+    gap: 30px;
+}
+
+.offer-text {
+    text-align: center;
+}
+
+#newintown {
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 1.2em;
+    color: #ff69b4;
+    margin-bottom: 10px;
+}
+
+.crispy {
+    font-family: 'Rubik Mono One', monospace; /* Unique font for emphasis */
+    font-size: 3.5em;
+    color: #333;
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+.chocolateydelight {
+    color: #8a2be2;
+}
+
+.offer-text .price {
+    font-family: 'Teko', sans-serif;
+    font-size: 3em;
+    color: #d32f2f;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.offer-text .price small {
+    color: #999;
+    text-decoration: line-through;
+    font-size: 0.7em;
+    margin-right: 5px;
+}
+
+.chocotacos img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block; /* Remove extra space below image */
+}
+
+/* Back to Top Button */
+#backtotop {
+    position: fixed; /* Fixed position relative to the viewport */
+    bottom: 20px; /* 20px from the bottom */
+    right: 20px; /* 20px from the right */
+    z-index: 999; /* Ensure it's above other content */
+    opacity: 0; /* Start hidden */
+    visibility: hidden; /* Start hidden */
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; /* Smooth transition */
+}
+
+#backtotop.show {
+    opacity: 1; /* Fade in when 'show' class is added */
+    visibility: visible; /* Make visible when 'show' class is added */
+}
+
+#backtotop button {
+    background-color: #DAB5DA; /* Hot pink */
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-family: 'Jost', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
+
+#backtotop button:hover {
+    background-color: #551033;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Section */
+.cont4 {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 50px; /* Space before footer */
+}
+
+.git {
+    font-family: 'Anybody', sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    position: relative;
+    color: #eee;
+}
+
+.git hr {
+    border: none;
+    border-top: 1px solid #777;
+    width: 60%;
+    margin: 10px auto;
+}
+
+.foo {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: space-around;
+    gap: 20px; /* Space between footer items */
+    margin-bottom: 30px;
+}
+
+.foo div {
+    flex: 1; /* Allow items to grow and shrink */
+    min-width: 250px; /* Minimum width before wrapping */
+    padding: 15px;
+    background-color: #444;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.foo h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+    color: #ff69b4; /* Hot pink */
+    margin-top: 0;
+}
+
+.foo p {
+    font-family: 'Figtree', sans-serif;
+    font-size: 0.9em;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+.foo #s1 a {
+    color: #add8e6; /* Light blue */
+    text-decoration: none;
+}
+
+.foo #s1 a:hover {
+    text-decoration: underline;
+}
+
+#footer {
+    border-top: 1px solid #777;
+    padding-top: 20px;
+    font-family: 'Figtree', sans-serif;
+    font-size: 0.8em;
+    color: #aaa;
+}
+
+
+/* Responsive Design */
+
+/* Laptop and Desktop View (min-width: 1025px) - Default styles apply */
+
+/* Tablet View (max-width: 1024px) */
+@media (max-width: 1024px) {
+    #icream {
+        font-size: 2.5em;
+    }
+
+    #span2 {
+        font-size: 0.7em;
+    }
+
+    .ourflavours {
+        font-size: 2.5em;
+    }
+
+    .nav-item a {
+        font-size: 1em;
+        padding: 6px 12px;
+    }
+
+    .cont1 {
+        font-size: 1.1em;
+    }
+
+    #gelato {
+        font-size: 2em;
+    }
+
+    #cone {
+        flex-direction: column; /* Ensure stacking on tablet if needed */
+        max-width: 700px;
+    }
+
+    #cone-details h2 {
+        font-size: 2.5em;
+    }
+
+    #cone-price {
+        font-size: 2em;
+    }
+
+    #indulge {
+        font-size: 1.8em;
+    }
+
+    .softy-container,
+    .products-container {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Adjust grid for tablets */
+        gap: 20px;
+    }
+
+    .softy-card img,
+    .product-card img {
+        height: 180px;
+    }
+
+    .softy-card h3,
+    .product-card h3 {
+        font-size: 1.3em;
+    }
+
+    .softy-card p,
+    .product-card p {
+        font-size: 0.9em;
+    }
+
+    .softy-card .price,
+    .product-card .price {
+        font-size: 1.6em;
+    }
+
+    /* .b1{
+      width: 50%;
+    } Removed this line */
+
+    .b1, .bb1 {
+        padding: 8px 20px;
+        font-size: 0.9em;
+    }
+
+    .b2, .bb2 {
+        width: 35px;
+        height: 35px;
+        font-size: 1.3em;
+    }
+
+    #cla, #cla1, #cla2, #cla3, #cla4, #cla5, #cla6 {
+        font-size: 1.8em;
+    }
+
+    #offer {
+        flex-direction: column;
+        padding: 20px;
+        max-width: 80%;
+    }
+
+    .crispy {
+        font-size: 3em;
+    }
+
+    .offer-text .price {
+        font-size: 2.5em;
+    }
+
+    .chocotacos img {
+        max-width: 90%;
+        height: auto;
+    }
+
+    .foo div {
+        min-width: 200px;
+    }
+
+    #back-to-home-button {
+        top: 15px;
+        left: 15px;
+    }
+
+    #back-to-home-button a {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+
+    #back-to-home-button a i {
+        font-size: 1em;
+    }
+
+    #backtotop {
+        bottom: 15px;
+        right: 15px;
+    }
+
+    #backtotop button {
+        padding: 10px 25px;
+        font-size: 0.9em;
+    }
+}
+
+/* Mobile View (max-width: 767px) */
+@media (max-width: 767px) {
+    #cont2 {
+        padding: 15px;
+    }
+
+    #icream {
+        font-size: 2em;
+    }
+
+    #span2 {
+        font-size: 0.6em;
+    }
+
+    .ourflavours {
+        font-size: 2em;
+        padding: 20px 10px 10px;
+    }
+
+    .nav-list {
+        flex-direction: column; /* Stack nav items vertically */
+        gap: 10px;
+    }
+
+    .nav-item a {
+        font-size: 0.9em;
+        padding: 8px 10px;
+        width: 80%; /* Make nav items wider */
+        margin: 0 auto;
+        display: block;
+    }
+
+    .cont1 {
+        font-size: 1em;
+        padding: 10px 15px;
+        max-width: 95%;
+    }
+
+    #gelato {
+        font-size: 1.8em;
+        margin: 30px 0 15px;
+    }
+
+    #cone {
+        flex-direction: column;
+        padding: 15px;
+        max-width: 95%;
+    }
+
+    #cone-details h2 {
+        font-size: 2em;
+    }
+
+    #cone-price {
+        font-size: 1.8em;
+    }
+
+    #indulge {
+        font-size: 1.6em;
+        margin: 30px 10px 15px;
+    }
+
+    .softy-container,
+    .products-container {
+        grid-template-columns: 1fr; /* Single column layout for mobile */
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .softy-card img,
+    .product-card img {
+        height: 150px;
+    }
+
+    .softy-card h3,
+    .product-card h3 {
+        font-size: 1.2em;
+    }
+
+    .softy-card p,
+    .product-card p {
+        font-size: 0.85em;
+    }
+
+    .softy-card .price,
+    .product-card .price {
+        font-size: 1.5em;
+    }
+
+    /* .b1, .bb1 {
+        padding: 6px 15px;
+        font-size: 0.8em;
+    } Removed this line */
+
+    .b2, .bb2 {
+        width: 30px;
+        height: 30px;
+        font-size: 1.2em;
+    }
+
+    #cla, #cla1, #cla2, #cla3, #cla4, #cla5, #cla6 {
+        font-size: 1.6em;
+        margin: 30px 10px 15px;
+    }
+
+    #offer {
+        flex-direction: column;
+        padding: 15px;
+        max-width: 95%;
+    }
+
+    .crispy {
+        font-size: 2.5em;
+    }
+
+    .offer-text .price {
+        font-size: 2em;
+    }
+
+    .chocotacos img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .foo {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .foo div {
+        width: 90%;
+        min-width: unset;
+    }
+
+    .cont4 {
+        padding: 20px 10px;
+    }
+
+    .git {
+        font-size: 1.2em;
+    }
+
+    .git hr {
+        width: 80%;
+    }
+
+    #backtotop button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    #back-to-home-button {
+        top: 10px;
+        left: 10px;
+    }
+
+    #back-to-home-button a {
+        padding: 6px 10px;
+        font-size: 0.8em;
+    }
+
+    #back-to-home-button a i {
+        font-size: 1em;
+    }
+
+    #backtotop {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    #backtotop button {
+        padding: 8px 18px;
+        font-size: 0.8em;
+    }
+}
+
+/* Extra Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    #icream {
+        font-size: 1.8em;
+    }
+
+    .ourflavours {
+        font-size: 1.8em;
+    }
+
+    #gelato {
+        font-size: 1.5em;
+    }
+
+    #cone-details h2 {
+        font-size: 1.8em;
+    }
+
+    #cone-price {
+        font-size: 1.6em;
+    }
+
+    #indulge {
+        font-size: 1.4em;
+    }
+
+    .softy-card h3,
+    .product-card h3 {
+        font-size: 1.1em;
+    }
+
+    .softy-card p,
+    .product-card p {
+        font-size: 0.8em;
+    }
+
+    .softy-card .price,
+    .product-card .price {
+        font-size: 1.3em;
+    }
+
+    #cla, #cla1, #cla2, #cla3, #cla4, #cla5, #cla6 {
+        font-size: 1.4em;
+    }
+
+    .crispy {
+        font-size: 2em;
+    }
+
+    .offer-text .price {
+        font-size: 1.8em;
+    }
+
+    #back-to-home-button {
+        top: 5px;
+        left: 5px;
+    }
+
+    #back-to-home-button a {
+        padding: 5px 8px;
+        font-size: 0.7em;
+    }
+
+    #back-to-home-button a i {
+        font-size: 0.9em;
+    }
+
+    #backtotop {
+        bottom: 5px;
+        right: 5px;
+    }
+
+    #backtotop button {
+        padding: 6px 15px;
+        font-size: 0.7em;
+    }
+}

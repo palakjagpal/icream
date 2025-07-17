@@ -1,0 +1,459 @@
+/* General Body Styles */
+body {
+    margin: 0;
+    font-family: 'Figtree', sans-serif; /* Default font */
+    background-color: #f8f8f8; /* Light background for the whole page */
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+    cursor: pointer;
+}
+
+/* Back to Home Button */
+#back-to-home-button {
+    position: fixed;
+    top: 20px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+#back-to-home-button a {
+    display: flex;
+    align-items: center;
+    background-color: #DAB5DA; /* Hot pink */
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 25px;
+    font-family: 'Jost', sans-serif;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
+
+#back-to-home-button a:hover {
+    background-color: #551033;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#back-to-home-button a i {
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+
+
+/* Page Container */
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure page takes full viewport height */
+}
+
+/* icream Logo and Slogan Section */
+.cont2 {
+    text-align: center;
+    justify-content: center;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    word-break: break-all;
+    padding: 0px;
+}
+
+#icream {
+    font-size: 4vh;
+    font-family: Righteous;
+}
+
+#span1 {
+    color: #DAB5DA;
+    font-family: Righteous;
+}
+
+#span2 {
+    font-size: 2vh;
+    font-family: Righteous;
+    font-weight: bold;
+    word-spacing: 5px;
+}
+
+hr {
+    width: auto;
+}
+
+#fp {
+    text-align: left;
+    padding-left: 60px;
+}
+
+
+/* Main Signup Form Section */
+.main {
+    flex-grow: 1; /* Allows this section to take up available space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.wb {
+    font-family: 'Concert One', cursive;
+    font-size: 3.5em;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.1;
+}
+
+.weh {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between text and button */
+}
+
+.weh button {
+    background-color: transparent;
+    color: #8a2be2;
+    border: 1px solid #8a2be2;
+    border-radius: 20px;
+    padding: 8px 15px;
+    font-family: 'Righteous', cursive;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.weh button a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.weh button:hover {
+    background-color: #8a2be2;
+    color: #fff;
+}
+
+/* Form Styling */
+.form {
+    width: 100%;
+    max-width: 600px; /* Increased max-width to accommodate horizontal password fields */
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-group {
+    width: 100%;
+    max-width: 350px; /* Max width for individual input groups */
+    margin-bottom: 15px;
+    text-align: left; /* Align labels to the left */
+}
+
+#label {
+    font-family: 'Figtree', sans-serif;
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 5px;
+    display: block; /* Ensure label takes full width */
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"] {
+    width: calc(100% - 20px); /* Adjust for padding */
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ccc; /* Thin bottom border */
+    background-color: transparent; /* Transparent background */
+    font-family: 'Figtree', sans-serif;
+    font-size: 1em;
+    color: #333;
+    outline: none; /* Remove outline on focus */
+    text-align: left; /* Align input text to the left */
+}
+
+/* Placeholder styling */
+.form input::placeholder {
+    color: #aaa;
+}
+
+/* Password Group for Horizontal Alignment */
+.password-group {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 20px; /* Space between password fields */
+    width: 100%;
+    max-width: 720px; /* Max width for the password group */
+    justify-content: center; /* Center the password fields */
+    margin-bottom: 15px;
+}
+
+.password-group .input-group {
+    flex: 1; /* Allow fields to grow and shrink */
+    min-width: 280px; /* Minimum width for each password field */
+    margin-bottom: 0; /* Remove extra margin */
+}
+
+/* Button Section */
+.button {
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button button {
+    background-color: #d8bfd8; /* Light purple */
+    color: #333; /* Dark text for contrast */
+    border: none;
+    border-radius: 25px; /* Rounded corners */
+    padding: 12px 40px;
+    font-family: 'Righteous', cursive;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 70%; /* Adjust button width */
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+.button button:hover {
+    background-color: #c0a0c0; /* Slightly darker purple on hover */
+    transform: translateY(-2px);
+}
+
+/* Footer Section */
+.cont4 {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.git {
+    font-family: 'Anybody', sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    position: relative;
+    color: #eee;
+}
+
+.git hr {
+    border: none;
+    border-top: 1px solid #777;
+    width: 60%;
+    margin: 10px auto;
+}
+
+.foo {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: space-around;
+    gap: 20px; /* Space between footer items */
+    margin-bottom: 30px;
+}
+
+.foo div {
+    flex: 1; /* Allow items to grow and shrink */
+    min-width: 250px; /* Minimum width before wrapping */
+    padding: 15px;
+    background-color: #444;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.foo h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+    color: #ff69b4; /* Hot pink */
+    margin-top: 0;
+}
+
+.foo p {
+    font-family: 'Figtree', sans-serif;
+    font-size: 0.9em;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+.foo #s1 a {
+    color: #add8e6; /* Light blue */
+    text-decoration: none;
+}
+
+.foo #s1 a:hover {
+    text-decoration: underline;
+}
+
+#footer {
+    border-top: 1px solid #777;
+    padding-top: 20px;
+    font-family: 'Figtree', sans-serif;
+    font-size: 0.8em;
+    color: #aaa;
+}
+
+/* Responsive Design */
+
+/* Tablet View (e.g., 768px to 1024px) */
+@media (max-width: 1024px) {
+    #icream {
+        font-size: 2.5em;
+    }
+
+    .wb {
+        font-size: 3em;
+    }
+
+    .weh {
+        font-size: 1em;
+    }
+
+    .form {
+        max-width: 550px; /* Adjust for tablet */
+    }
+
+    .input-group {
+        max-width: 300px;
+    }
+
+    .password-group {
+        max-width: 620px; /* Adjust for tablet */
+        gap: 15px;
+    }
+
+    .password-group .input-group {
+        min-width: 250px;
+    }
+
+    .button button {
+        width: 80%;
+    }
+
+    .foo div {
+        min-width: 200px;
+    }
+}
+
+/* Mobile View (e.g., up to 767px) */
+@media (max-width: 767px) {
+    .cont2 {
+        padding: 15px;
+    }
+
+    #icream {
+        font-size: 2em;
+    }
+
+    #span2 {
+        font-size: 0.7em;
+    }
+
+    .wb {
+        font-size: 2.5em;
+    }
+
+    .weh {
+        font-size: 0.9em;
+        margin-bottom: 20px;
+        flex-direction: column; /* Stack "Already have an account" and button */
+        gap: 5px;
+    }
+
+    .weh button {
+        padding: 6px 12px;
+        font-size: 0.8em;
+    }
+
+    .form {
+        max-width: 90%; /* Wider on small screens */
+    }
+
+    .input-group {
+        max-width: 100%; /* Full width on mobile */
+    }
+
+    .form input[type="text"],
+    .form input[type="email"],
+    .form input[type="password"] {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+
+    .password-group {
+        flex-direction: column; /* Stack password fields vertically on mobile */
+        gap: 0; /* Remove gap when stacked */
+        max-width: 100%;
+    }
+
+    .password-group .input-group {
+        min-width: unset; /* Remove min-width constraint */
+        width: 100%;
+        margin-bottom: 15px; /* Add margin back for stacked fields */
+    }
+
+    .button {
+        max-width: 90%;
+    }
+
+    .button button {
+        padding: 10px 20px;
+        font-size: 1em;
+        width: 90%; /* Even wider on mobile */
+        max-width: unset; /* Remove max-width constraint */
+    }
+
+    .foo {
+        flex-direction: column; /* Stack footer items vertically */
+        align-items: center;
+    }
+
+    .foo div {
+        width: 90%; /* Full width for stacked items */
+        min-width: unset;
+    }
+
+    .cont4 {
+        padding: 20px 10px;
+    }
+
+    .git {
+        font-size: 1.2em;
+    }
+
+    .git hr {
+        width: 80%;
+    }
+}
+
+/* Extra Small Mobile (e.g., up to 480px) */
+@media (max-width: 480px) {
+    #icream {
+        font-size: 1.8em;
+    }
+
+    .wb {
+        font-size: 2em;
+    }
+
+    .weh {
+        font-size: 0.8em;
+    }
+
+    .form input[type="text"],
+    .form input[type="email"],
+    .form input[type="password"] {
+        font-size: 0.85em;
+    }
+
+    .button button {
+        font-size: 0.9em;
+    }
+}

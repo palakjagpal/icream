@@ -1,0 +1,368 @@
+/* General Body Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif; /* Default font from contact.html */
+    background-color: #f8f8f8; /* Light background for the whole page */
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+    cursor: pointer;
+}
+
+/* Back to Home Button */
+#back-to-home-button {
+    position: fixed;
+    top: 20px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+#back-to-home-button a {
+    display: flex;
+    align-items: center;
+    background-color: #DAB5DA; /* Hot pink */
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 25px;
+    font-family: 'Anybody', sans-serif; /* Font from contact.html */
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
+
+#back-to-home-button a:hover {
+    background-color: #551033;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#back-to-home-button a i {
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+
+/* Top Banner Section */
+.cont1 {
+    background-color: #DAB5DA; /* Hot pink */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-family: 'Concert One', cursive;
+    font-size: 1em;
+}
+
+.cont1 a {
+    color: #551033; /* Darker pink for link */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.cont1 a:hover {
+    color: #fff;
+}
+
+/* icream Logo and Slogan Section */
+.cont2 {
+    text-align: center;
+    justify-content: center;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    word-break: break-all;
+    padding: 0px;
+}
+
+#icream {
+    font-size: 4vh;
+    font-family: 'Righteous', cursive;
+}
+
+#span1 {
+    color: #DAB5DA;
+    font-family: 'Righteous', cursive;
+}
+
+#span2 {
+    font-size: 2vh;
+    font-family: 'Righteous', cursive;
+    font-weight: bold;
+    word-spacing: 5px;
+}
+
+hr {
+    width: auto;
+}
+
+/* CONTACT Title Section */
+.cont3 {
+    font-family: 'Concert One', cursive;
+    font-size: 3.5em;
+    color: #333;
+    margin-bottom: 30px;
+    line-height: 1.1;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Form Styling */
+.form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 30px auto; /* Center the form and add bottom margin */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px; /* Add horizontal padding */
+    box-sizing: border-box;
+}
+
+.form input[type="email"],
+.form textarea {
+    width: calc(100% - 20px); /* Adjust for padding */
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    color: #333;
+    outline: none;
+    resize: vertical; /* Allow vertical resizing for textarea */
+    box-sizing: border-box;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+    color: #aaa;
+}
+
+/* Button Section */
+.button {
+    width: 100%; /* Ensure it takes full width to allow auto margins to work */
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+    margin: 0 auto 50px auto; /* Center the container and add bottom margin */
+}
+
+.button button {
+    background-color: #d8bfd8; /* Light purple */
+    color: #333; /* Dark text for contrast */
+    border: none;
+    border-radius: 25px; /* Rounded corners */
+    padding: 12px 40px;
+    font-family: 'Righteous', cursive;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 200px; /* Fixed width for consistency, or use max-width */
+    max-width: 90%; /* Ensure it doesn't exceed 90% of parent on small screens */
+}
+
+.button button:hover {
+    background-color: #c0a0c0; /* Slightly darker purple on hover */
+    transform: translateY(-2px);
+}
+
+/* Footer Section */
+.cont4 {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.git {
+    font-family: 'Anybody', sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    position: relative;
+    color: #eee;
+}
+
+.git hr {
+    border: none;
+    border-top: 1px solid #777;
+    width: 60%;
+    margin: 10px auto;
+}
+
+.foo {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: space-around;
+    gap: 20px; /* Space between footer items */
+    margin-bottom: 30px;
+}
+
+.foo div {
+    flex: 1; /* Allow items to grow and shrink */
+    min-width: 250px; /* Minimum width before wrapping */
+    padding: 15px;
+    background-color: #444;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.foo h3 {
+    font-family: 'Anybody', sans-serif; /* Adjusted to Anybody from Montserrat */
+    font-size: 1.2em;
+    color: #ff69b4; /* Hot pink */
+    margin-top: 0;
+}
+
+.foo p {
+    font-family: 'Poppins', sans-serif; /* Adjusted to Poppins from Figtree */
+    font-size: 0.9em;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+.foo #s1 a {
+    color: #add8e6; /* Light blue */
+    text-decoration: none;
+}
+
+.foo #s1 a:hover {
+    text-decoration: underline;
+}
+
+#footer {
+    border-top: 1px solid #777;
+    padding-top: 20px;
+    font-family: 'Poppins', sans-serif; /* Adjusted to Poppins from Figtree */
+    font-size: 0.8em;
+    color: #aaa;
+}
+
+/* Responsive Design */
+
+/* Tablet View (e.g., 768px to 1024px) */
+@media (max-width: 1024px) {
+    .cont1 {
+        font-size: 0.9em;
+    }
+
+    #icream {
+        font-size: 2.5em;
+    }
+
+    .cont3 {
+        font-size: 3em;
+    }
+
+    .form {
+        max-width: 550px;
+    }
+
+    .form input[type="email"],
+    .form textarea {
+        padding: 12px;
+        font-size: 0.95em;
+    }
+
+    .button button {
+        width: 180px; /* Adjusted fixed width for tablet */
+        max-width: 80%; /* Ensure it doesn't exceed 80% on tablet */
+    }
+
+    .foo div {
+        min-width: 200px;
+    }
+}
+
+/* Mobile View (e.g., up to 767px) */
+@media (max-width: 767px) {
+    .cont1 {
+        font-size: 0.8em;
+        padding: 8px 0;
+    }
+
+    .cont2 {
+        padding: 15px;
+    }
+
+    #icream {
+        font-size: 2em;
+    }
+
+    #span2 {
+        font-size: 0.7em;
+    }
+
+    .cont3 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        padding: 15px;
+    }
+
+    .form {
+        max-width: 90%; /* Wider on small screens */
+        padding: 0 10px;
+    }
+
+    .form input[type="email"],
+    .form textarea {
+        padding: 10px;
+        font-size: 0.9em;
+        margin-bottom: 15px;
+    }
+
+    .button {
+        margin-bottom: 30px;
+    }
+
+    .button button {
+        padding: 10px 20px;
+        font-size: 1em;
+        width: 150px; /* Adjusted fixed width for mobile */
+        max-width: 90%; /* Ensure it doesn't exceed 90% on mobile */
+    }
+
+    .foo {
+        flex-direction: column; /* Stack footer items vertically */
+        align-items: center;
+    }
+
+    .foo div {
+        width: 90%; /* Full width for stacked items */
+        min-width: unset;
+    }
+
+    .cont4 {
+        padding: 20px 10px;
+    }
+
+    .git {
+        font-size: 1.2em;
+    }
+
+    .git hr {
+        width: 80%;
+    }
+}
+
+/* Extra Small Mobile (e.g., up to 480px) */
+@media (max-width: 480px) {
+    .cont1 {
+        font-size: 0.7em;
+    }
+
+    #icream {
+        font-size: 1.8em;
+    }
+
+    .cont3 {
+        font-size: 2em;
+    }
+
+    .form input[type="email"],
+    .form textarea {
+        font-size: 0.85em;
+    }
+
+    .button button {
+        font-size: 0.9em;
+        width: 120px; /* Adjusted fixed width for extra small mobile */
+    }
+}

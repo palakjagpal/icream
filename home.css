@@ -10,6 +10,8 @@
             overflow-x: hidden;
             /* Prevent horizontal scrollbar */
             cursor: pointer;
+                -webkit-tap-highlight-color: transparent;
+            tap-highlight-color: transparent; /* Standard property */
         }
 
         /* Fix for blue tap highlight on mobile/tablet */

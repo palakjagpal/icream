@@ -12,6 +12,12 @@
             cursor: pointer;
         }
 
+        /* Fix for blue tap highlight on mobile/tablet */
+        a, button, .faq-question, .menu-toggle, input[type="submit"] {
+            -webkit-tap-highlight-color: transparent;
+            tap-highlight-color: transparent; /* Standard property */
+        }
+
         a {
             text-decoration: none;
             color: inherit;

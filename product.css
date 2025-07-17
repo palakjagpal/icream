@@ -7,6 +7,8 @@ body {
     color: #333;
     line-height: 1.6;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+            tap-highlight-color: transparent; /* Standard property */
 }
 
 /* Fix for blue tap highlight on mobile/tablet */

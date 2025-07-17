@@ -9,6 +9,12 @@ body {
     cursor: pointer;
 }
 
+/* Fix for blue tap highlight on mobile/tablet */
+a, button, .faq-question, .menu-toggle {
+    -webkit-tap-highlight-color: transparent;
+    tap-highlight-color: transparent; /* Standard property */
+}
+
 /* Back to Home Button */
 #back-to-home-button {
     position: fixed;

@@ -26,6 +26,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100..900&display=swap" rel="stylesheet">
+    <!-- SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 
 </head>
 
@@ -110,7 +112,7 @@
 
         <div class="m3">
             <p id="p3">NEWSLETTER SIGNUP:</p>
-            <form class="ex">
+            <form class="ex" id="newsletterForm">
                 <input type="email" placeholder="Enter your Email Address" id="email" required>
                 <input type="submit" value="GO">
             </form>
@@ -122,6 +124,8 @@
 
     </div>
 
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
     <script>
         // Get the menu toggle button and the navigation links container
         const menuToggle = document.getElementById('menuToggle');
@@ -131,6 +135,66 @@
         if (menuToggle && navbarNav) {
             menuToggle.addEventListener('click', () => {
                 navbarNav.classList.toggle('active'); // Toggle the 'active' class
+            });
+        }
+
+        // Newsletter Signup Form Logic
+        const newsletterForm = document.getElementById('newsletterForm');
+        const emailInput = document.getElementById('email');
+
+        if (newsletterForm && emailInput) {
+            newsletterForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent default form submission
+
+                const email = emailInput.value;
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Strict email regex
+
+                if (!email) {
+                    // Show error if email is empty
+                    Swal.fire({
+                        title: 'Error!',
+                        text: 'Please enter your email address.',
+                        icon: 'error',
+                        confirmButtonText: 'OK',
+                        customClass: {
+                            popup: 'swal-custom-popup',
+                            title: 'swal-custom-title',
+                            content: 'swal-custom-content',
+                            confirmButton: 'swal-custom-confirm-button'
+                        }
+                    });
+                } else if (!emailRegex.test(email)) {
+                    // Show error if email format is invalid
+                    Swal.fire({
+                        title: 'Invalid Email!',
+                        text: 'Please enter a valid email address (e.g., example@domain.com).',
+                        icon: 'error',
+                        confirmButtonText: 'OK',
+                        customClass: {
+                            popup: 'swal-custom-popup',
+                            title: 'swal-custom-title',
+                            content: 'swal-custom-content',
+                            confirmButton: 'swal-custom-confirm-button'
+                        }
+                    });
+                } else {
+                    // If validation passes, show success message
+                    Swal.fire({
+                        title: 'Subscribed!',
+                        text: 'Thank you for subscribing to our newsletter!',
+                        icon: 'success',
+                        confirmButtonText: 'Great!',
+                        customClass: {
+                            popup: 'swal-custom-popup',
+                            title: 'swal-custom-title',
+                            content: 'swal-custom-content',
+                            confirmButton: 'swal-custom-confirm-button'
+                        }
+                    }).then(() => {
+                        // Optional: Clear the input field after successful subscription
+                        emailInput.value = '';
+                    });
+                }
             });
         }
     </script>

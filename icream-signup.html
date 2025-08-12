@@ -11,6 +11,9 @@
             <!-- Font Awesome for the arrow icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -117,9 +120,147 @@
         </div>
 
         <div class="button">
-            <button>Sign Up</button>
+            <button id="signupButton">Sign Up</button>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script>
+        const signupForm = document.getElementById('form');
+        const fullNameInput = document.getElementById('fullName');
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const repeatPasswordInput = document.getElementById('repeatPassword');
+        const signupButton = document.getElementById('signupButton');
+
+        if (signupButton && fullNameInput && emailInput && passwordInput && repeatPasswordInput) {
+            signupButton.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent default button action
+
+                const fullName = fullNameInput.value.trim();
+                const email = emailInput.value.trim();
+                const password = passwordInput.value.trim();
+                const repeatPassword = repeatPasswordInput.value.trim();
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                if (!fullName) {
+                    Swal.fire({
+                        title: 'Error!',
+                        text: 'Please enter your full name.',
+                        icon: 'error',
+                        confirmButtonText: 'OK',
+                        customClass: {
+                            popup: 'swal-custom-popup',
+                            title: 'swal-custom-title',
+                            content: 'swal-custom-content',
+                            confirmButton: 'swal-custom-confirm-button'
+                        }
+                    });
+                } else if (!email) {
+                    Swal.fire({
+                        title: 'Error!',
+                        text: 'Please enter your email address.',
+                        icon: 'error',
+                        confirmButtonText: 'OK',
+                        customClass: {
+                            popup: 'swal-custom-popup',
+                            title: 'swal-custom-title',
+                            content: 'swal-custom-content',
+                            confirmButton: 'swal-custom-confirm-button'
+                        }
+                    });
+                } else if (!emailRegex.test(email)) {
+                    Swal.fire({
+                        title: 'Invalid Email!',
+                        text: 'Please enter a valid email address (e.g., example@domain.com).',
+                        icon: 'error',
+                        confirmButtonText: 'OK',
+                        customClass: {
+                            popup: 'swal-custom-popup',
+                            title: 'swal-custom-title',
+                            content: 'swal-custom-content',
+                            confirmButton: 'swal-custom-confirm-button'
+                        }
+                    });
+                } else if (!password) {
+                    Swal.fire({
+                        title: 'Error!',
+                        text: 'Please enter your password.',
+                        icon: 'error',
+                        confirmButtonText: 'OK',
+                        customClass: {
+                            popup: 'swal-custom-popup',
+                            title: 'swal-custom-title',
+                            content: 'swal-custom-content',
+                            confirmButton: 'swal-custom-confirm-button'
+                        }
+                    });
+                } else if (password.length < 6) { // Example: minimum password length
+                    Swal.fire({
+                        title: 'Weak Password!',
+                        text: 'Password must be at least 6 characters long.',
+                        icon: 'warning',
+                        confirmButtonText: 'OK',
+                        customClass: {
+                            popup: 'swal-custom-popup',
+                            title: 'swal-custom-title',
+                            content: 'swal-custom-content',
+                            confirmButton: 'swal-custom-confirm-button'
+                        }
+                    });
+                } else if (!repeatPassword) {
+                    Swal.fire({
+                        title: 'Error!',
+                        text: 'Please repeat your password.',
+                        icon: 'error',
+                        confirmButtonText: 'OK',
+                        customClass: {
+                            popup: 'swal-custom-popup',
+                            title: 'swal-custom-title',
+                            content: 'swal-custom-content',
+                            confirmButton: 'swal-custom-confirm-button'
+                        }
+                    });
+                } else if (password !== repeatPassword) {
+                    Swal.fire({
+                        title: 'Passwords Mismatch!',
+                        text: 'The password and repeat password do not match.',
+                        icon: 'error',
+                        confirmButtonText: 'OK',
+                        customClass: {
+                            popup: 'swal-custom-popup',
+                            title: 'swal-custom-title',
+                            content: 'swal-custom-content',
+                            confirmButton: 'swal-custom-confirm-button'
+                        }
+                    });
+                } else {
+                    // In a real application, you would send this data to a server for user registration.
+                    // For demonstration, we'll just show a success message.
+                    Swal.fire({
+                        title: 'Sign Up Successful!',
+                        text: 'Your account has been created.',
+                        icon: 'success',
+                        confirmButtonText: 'Great!',
+                        customClass: {
+                            popup: 'swal-custom-popup',
+                            title: 'swal-custom-title',
+                            content: 'swal-custom-content',
+                            confirmButton: 'swal-custom-confirm-button'
+                        }
+                    }).then(() => {
+                        // Optional: Clear the input fields after successful registration
+                        fullNameInput.value = '';
+                        emailInput.value = '';
+                        passwordInput.value = '';
+                        repeatPasswordInput.value = '';
+                        // Optional: Redirect to login page
+                        // window.location.href = 'icream-login.html';
+                    });
+                }
+            });
+        }
+    </script>
 
     <div class="cont4">
         <div class="git">

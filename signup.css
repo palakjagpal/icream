@@ -463,5 +463,7 @@ hr {
 
     .button button {
         font-size: 0.9em;
+        width: 65%;
     }
 }
+

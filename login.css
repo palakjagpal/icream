@@ -488,8 +488,11 @@ hr {
     .form input[type="password"] {
         font-size: 0.85em;
     }
+    .button button{
+        font-size: 0.9em;
+        width: 80%;
+    }
 
-    .button button,
     .wehi button {
         font-size: 0.9em;
         width: 100%;
@@ -510,3 +513,4 @@ hr {
         font-size: 0.9em;
     }
 }
+
